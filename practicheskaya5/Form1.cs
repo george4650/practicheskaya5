@@ -68,7 +68,9 @@ namespace practicheskaya5
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Программа показывает возможности класса Triad (тройка отрицательных чисел)\nБароян Гиоргий\nИСП-31");
+            MessageBox.Show("Создать класс Triad (тройка положительных чисел). " +
+                "Создать необходимые методы и свойства. Определить метод увеличения полей на заданное число. " +
+                "Создать перегруженный метод для удвоения всех полей.\nБароян Гиоргий\nИСП-31");
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)

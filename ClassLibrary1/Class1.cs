@@ -116,9 +116,9 @@ namespace ClassLibrary1
         {
 
 
-            value1++;
-            value2++;
-            value3++;
+            value1*=2;
+            value2*=2;
+            value3*=2;
 
 
         }
