@@ -19,23 +19,26 @@ namespace practicheskaya5
             InitializeComponent();
         }
         ClassLibrary1.Triad triad = new Triad();
+        
+        //Умножить значения на 2
         private void button6_Click(object sender, EventArgs e)
         {
             triad.Increment();
-            curFirst.Text = triad.Value1.ToString();
-            curSecond.Text = triad.Value2.ToString();
-            curThird.Text = triad.Value3.ToString();
+            First1.Text = triad.Value1.ToString();
+            Second2.Text = triad.Value2.ToString();
+            Third3.Text = triad.Value3.ToString();
         }
 
+        //Ввести значения
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Int32.TryParse(allFirst.Text, out int first) && Int32.TryParse(allSecond.Text, out int second) && Int32.TryParse(allThird.Text, out int third))
+            if (Int32.TryParse(pervoe.Text, out int first) && Int32.TryParse(vtoroe.Text, out int second) && Int32.TryParse(tretye.Text, out int third))
             {
-                // пересоздаем объект с новыми характеристиками
+                
                 triad = new Triad(first, second, third);
-                curFirst.Text = triad.Value1.ToString();
-                curSecond.Text = triad.Value2.ToString();
-                curThird.Text = triad.Value3.ToString();
+                First1.Text = triad.Value1.ToString();
+                Second2.Text = triad.Value2.ToString();
+                Third3.Text = triad.Value3.ToString();
             }
             else
             {
@@ -43,22 +46,24 @@ namespace practicheskaya5
             }
         }
 
+        //Сгенерировать значения
         private void button8_Click(object sender, EventArgs e)
         {
             triad.RandomFill();
-            curFirst.Text = triad.Value1.ToString();
-            curSecond.Text = triad.Value2.ToString();
-            curThird.Text = triad.Value3.ToString();
+            First1.Text = triad.Value1.ToString();
+            Second2.Text = triad.Value2.ToString();
+            Third3.Text = triad.Value3.ToString();
         }
 
+        //Увеличить на значение
         private void button5_Click(object sender, EventArgs e)
         {
             if (Int32.TryParse(incValue.Text, out int inc))
             {
                 triad.Sum(inc);
-                curFirst.Text = triad.Value1.ToString();
-                curSecond.Text = triad.Value2.ToString();
-                curThird.Text = triad.Value3.ToString();
+                First1.Text = triad.Value1.ToString();
+                Second2.Text = triad.Value2.ToString();
+                Third3.Text = triad.Value3.ToString();
             }
             else
             {

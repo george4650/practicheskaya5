@@ -99,7 +99,7 @@ namespace ClassLibrary1
 
         /*Методы*/
        
-        // Задает случайные значения в диапазоне от 0 до 50 всем трём переменны
+        // Задает случайные значения в диапазоне от 0 до 50 
         
         public void RandomFill()
         {
@@ -110,7 +110,7 @@ namespace ClassLibrary1
         }
         
 
-        // Увелечение всех значений на 1
+        // Увелечение всех значений в 2 раза
     
         public void Increment()
         {
@@ -123,6 +123,7 @@ namespace ClassLibrary1
 
         }
         
+
         public void Sum(int initValue)
         {
           
@@ -134,19 +135,6 @@ namespace ClassLibrary1
 
         }
        
-        public void replacement(int initValue1, int initValue2, int initValue3)
-        {
-            // проверяем что значение положительное
-            if (initValue1 > 0 && initValue2 > 0 && initValue3 > 0)
-            {
-                value1 = initValue1;
-                value2 = initValue2;
-                value3 = initValue3;
-            }
-            else
-            {
-                MessageBox.Show("Значение должно быть положительным числом!");
-            }
-        }
+       
     }
 }

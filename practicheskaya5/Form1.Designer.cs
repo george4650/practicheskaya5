@@ -30,23 +30,23 @@
         {
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.curThird = new System.Windows.Forms.TextBox();
+            this.Third3 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.curSecond = new System.Windows.Forms.TextBox();
+            this.Second2 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.curFirst = new System.Windows.Forms.TextBox();
+            this.First1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.incValue = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.allThird = new System.Windows.Forms.TextBox();
+            this.input = new System.Windows.Forms.Button();
+            this.tretye = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.allSecond = new System.Windows.Forms.TextBox();
+            this.vtoroe = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.allFirst = new System.Windows.Forms.TextBox();
+            this.pervoe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,11 +75,11 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.curThird);
+            this.groupBox4.Controls.Add(this.Third3);
             this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.curSecond);
+            this.groupBox4.Controls.Add(this.Second2);
             this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.curFirst);
+            this.groupBox4.Controls.Add(this.First1);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox4.Location = new System.Drawing.Point(23, 390);
@@ -89,13 +89,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Итоговые значения";
             // 
-            // curThird
+            // Third3
             // 
-            this.curThird.Location = new System.Drawing.Point(306, 45);
-            this.curThird.Name = "curThird";
-            this.curThird.ReadOnly = true;
-            this.curThird.Size = new System.Drawing.Size(137, 26);
-            this.curThird.TabIndex = 10;
+            this.Third3.Location = new System.Drawing.Point(306, 45);
+            this.Third3.Name = "Third3";
+            this.Third3.ReadOnly = true;
+            this.Third3.Size = new System.Drawing.Size(137, 26);
+            this.Third3.TabIndex = 10;
             // 
             // label16
             // 
@@ -106,13 +106,13 @@
             this.label16.TabIndex = 9;
             this.label16.Text = "Третье ";
             // 
-            // curSecond
+            // Second2
             // 
-            this.curSecond.Location = new System.Drawing.Point(163, 45);
-            this.curSecond.Name = "curSecond";
-            this.curSecond.ReadOnly = true;
-            this.curSecond.Size = new System.Drawing.Size(137, 26);
-            this.curSecond.TabIndex = 7;
+            this.Second2.Location = new System.Drawing.Point(163, 45);
+            this.Second2.Name = "Second2";
+            this.Second2.ReadOnly = true;
+            this.Second2.Size = new System.Drawing.Size(137, 26);
+            this.Second2.TabIndex = 7;
             // 
             // label15
             // 
@@ -123,13 +123,13 @@
             this.label15.TabIndex = 6;
             this.label15.Text = "Второе";
             // 
-            // curFirst
+            // First1
             // 
-            this.curFirst.Location = new System.Drawing.Point(20, 45);
-            this.curFirst.Name = "curFirst";
-            this.curFirst.ReadOnly = true;
-            this.curFirst.Size = new System.Drawing.Size(137, 26);
-            this.curFirst.TabIndex = 3;
+            this.First1.Location = new System.Drawing.Point(20, 45);
+            this.First1.Name = "First1";
+            this.First1.ReadOnly = true;
+            this.First1.Size = new System.Drawing.Size(137, 26);
+            this.First1.TabIndex = 3;
             // 
             // label12
             // 
@@ -182,12 +182,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.allThird);
+            this.groupBox1.Controls.Add(this.input);
+            this.groupBox1.Controls.Add(this.tretye);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.allSecond);
+            this.groupBox1.Controls.Add(this.vtoroe);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.allFirst);
+            this.groupBox1.Controls.Add(this.pervoe);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(23, 51);
@@ -197,22 +197,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Задать значения";
             // 
-            // button1
+            // input
             // 
-            this.button1.Location = new System.Drawing.Point(30, 247);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 26);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Ввести";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.input.Location = new System.Drawing.Point(30, 247);
+            this.input.Name = "input";
+            this.input.Size = new System.Drawing.Size(137, 26);
+            this.input.TabIndex = 8;
+            this.input.Text = "Ввести";
+            this.input.UseVisualStyleBackColor = true;
+            this.input.Click += new System.EventHandler(this.button1_Click);
             // 
-            // allThird
+            // tretye
             // 
-            this.allThird.Location = new System.Drawing.Point(30, 198);
-            this.allThird.Name = "allThird";
-            this.allThird.Size = new System.Drawing.Size(137, 26);
-            this.allThird.TabIndex = 7;
+            this.tretye.Location = new System.Drawing.Point(30, 198);
+            this.tretye.Name = "tretye";
+            this.tretye.Size = new System.Drawing.Size(137, 26);
+            this.tretye.TabIndex = 7;
             // 
             // label5
             // 
@@ -223,12 +223,12 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Третье ";
             // 
-            // allSecond
+            // vtoroe
             // 
-            this.allSecond.Location = new System.Drawing.Point(30, 139);
-            this.allSecond.Name = "allSecond";
-            this.allSecond.Size = new System.Drawing.Size(137, 26);
-            this.allSecond.TabIndex = 5;
+            this.vtoroe.Location = new System.Drawing.Point(30, 139);
+            this.vtoroe.Name = "vtoroe";
+            this.vtoroe.Size = new System.Drawing.Size(137, 26);
+            this.vtoroe.TabIndex = 5;
             // 
             // label4
             // 
@@ -239,12 +239,12 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Второе";
             // 
-            // allFirst
+            // pervoe
             // 
-            this.allFirst.Location = new System.Drawing.Point(30, 80);
-            this.allFirst.Name = "allFirst";
-            this.allFirst.Size = new System.Drawing.Size(137, 26);
-            this.allFirst.TabIndex = 1;
+            this.pervoe.Location = new System.Drawing.Point(30, 80);
+            this.pervoe.Name = "pervoe";
+            this.pervoe.Size = new System.Drawing.Size(137, 26);
+            this.pervoe.TabIndex = 1;
             // 
             // label1
             // 
@@ -303,26 +303,30 @@
             // задатьЗначенияToolStripMenuItem
             // 
             this.задатьЗначенияToolStripMenuItem.Name = "задатьЗначенияToolStripMenuItem";
-            this.задатьЗначенияToolStripMenuItem.Size = new System.Drawing.Size(337, 22);
+            this.задатьЗначенияToolStripMenuItem.Size = new System.Drawing.Size(320, 22);
             this.задатьЗначенияToolStripMenuItem.Text = "Задать все значения";
+            this.задатьЗначенияToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
             // 
             // сгенерироватьЗначеняToolStripMenuItem
             // 
             this.сгенерироватьЗначеняToolStripMenuItem.Name = "сгенерироватьЗначеняToolStripMenuItem";
-            this.сгенерироватьЗначеняToolStripMenuItem.Size = new System.Drawing.Size(337, 22);
+            this.сгенерироватьЗначеняToolStripMenuItem.Size = new System.Drawing.Size(320, 22);
             this.сгенерироватьЗначеняToolStripMenuItem.Text = "Сгенерировать значения";
+            this.сгенерироватьЗначеняToolStripMenuItem.Click += new System.EventHandler(this.button8_Click);
             // 
             // увеличитьВсеЗнчениеНа1ToolStripMenuItem
             // 
             this.увеличитьВсеЗнчениеНа1ToolStripMenuItem.Name = "увеличитьВсеЗнчениеНа1ToolStripMenuItem";
-            this.увеличитьВсеЗнчениеНа1ToolStripMenuItem.Size = new System.Drawing.Size(337, 22);
-            this.увеличитьВсеЗнчениеНа1ToolStripMenuItem.Text = "Увеличить все знчение на 1";
+            this.увеличитьВсеЗнчениеНа1ToolStripMenuItem.Size = new System.Drawing.Size(320, 22);
+            this.увеличитьВсеЗнчениеНа1ToolStripMenuItem.Text = "Умножить значения на 2";
+            this.увеличитьВсеЗнчениеНа1ToolStripMenuItem.Click += new System.EventHandler(this.button6_Click);
             // 
             // увеличитьВсеЗначенияНаВведенноеЗначениеToolStripMenuItem
             // 
             this.увеличитьВсеЗначенияНаВведенноеЗначениеToolStripMenuItem.Name = "увеличитьВсеЗначенияНаВведенноеЗначениеToolStripMenuItem";
-            this.увеличитьВсеЗначенияНаВведенноеЗначениеToolStripMenuItem.Size = new System.Drawing.Size(337, 22);
-            this.увеличитьВсеЗначенияНаВведенноеЗначениеToolStripMenuItem.Text = "Увеличить все значения на введенное значение";
+            this.увеличитьВсеЗначенияНаВведенноеЗначениеToolStripMenuItem.Size = new System.Drawing.Size(320, 22);
+            this.увеличитьВсеЗначенияНаВведенноеЗначениеToolStripMenuItem.Text = "Увеличить все значения на введенное число";
+            this.увеличитьВсеЗначенияНаВведенноеЗначениеToolStripMenuItem.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
@@ -354,23 +358,23 @@
 
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox curThird;
+        private System.Windows.Forms.TextBox Third3;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox curSecond;
+        private System.Windows.Forms.TextBox Second2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox curFirst;
+        private System.Windows.Forms.TextBox First1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox incValue;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox allThird;
+        private System.Windows.Forms.Button input;
+        private System.Windows.Forms.TextBox tretye;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox allSecond;
+        private System.Windows.Forms.TextBox vtoroe;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox allFirst;
+        private System.Windows.Forms.TextBox pervoe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
