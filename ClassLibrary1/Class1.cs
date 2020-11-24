@@ -108,31 +108,21 @@ namespace ClassLibrary1
             value2 = random.Next(0, 50);
             value3 = random.Next(0, 50);
         }
-        
 
-        // Увелечение всех значений в 2 раза
-    
-        public void Increment()
+
+        // Перемножений всех значений
+
+        public static int operator *(Triad triad, int initValue)
         {
-
-
-            value1*=2;
-            value2*=2;
-            value3*=2;
-
-
+            int result = triad.value1 * triad.value2 * triad.value3 * initValue;
+            return result;
         }
-        
 
-        public void Sum(int initValue)
+        // Сложение всех значений
+        public static  int operator +(Triad triad, int initValue )
         {
-          
-
-            value1 += initValue;
-            value2 += initValue;
-            value3 += initValue;
-
-
+            int result = triad.value1 + triad.value2 + triad.value3 + initValue;
+            return result;
         }
        
        

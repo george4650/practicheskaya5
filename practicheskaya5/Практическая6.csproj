@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4C28E1E0-8E0A-43B7-9F14-F04E5775230C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>practicheskaya5</RootNamespace>
-    <AssemblyName>practicheskaya5</AssemblyName>
+    <RootNamespace>Практическая6</RootNamespace>
+    <AssemblyName>Практическая6</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

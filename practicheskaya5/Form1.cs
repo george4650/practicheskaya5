@@ -20,13 +20,24 @@ namespace practicheskaya5
         }
         ClassLibrary1.Triad triad = new Triad();
         
-        //Умножить значения на 2
+        //Умножить значения с числом
         private void button6_Click(object sender, EventArgs e)
         {
-            triad.Increment();
-            First1.Text = triad.Value1.ToString();
-            Second2.Text = triad.Value2.ToString();
-            Third3.Text = triad.Value3.ToString();
+            if (Int32.TryParse(incValue.Text, out int inc))
+            {
+                int firstNumber = Convert.ToInt32(First1.Text);
+                int secondNumber = Convert.ToInt32(Second2.Text);
+                int thirdNumber = Convert.ToInt32(Third3.Text);
+                int chislo = Convert.ToInt32(incValue.Text);
+                ClassLibrary1.Triad triadNumbers = new Triad(firstNumber, secondNumber, thirdNumber);
+                int Mult = triadNumbers * chislo;
+                Resultat2.Text = Mult.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Некорректный ввод");
+            }
+            
         }
 
         //Ввести значения
@@ -34,11 +45,10 @@ namespace practicheskaya5
         {
             if (Int32.TryParse(pervoe.Text, out int first) && Int32.TryParse(vtoroe.Text, out int second) && Int32.TryParse(tretye.Text, out int third))
             {
-                
-                triad = new Triad(first, second, third);
-                First1.Text = triad.Value1.ToString();
-                Second2.Text = triad.Value2.ToString();
-                Third3.Text = triad.Value3.ToString();
+
+                triad.Value1 = first;
+                triad.Value2 = second;
+                triad.Value3 = third;
             }
             else
             {
@@ -60,10 +70,13 @@ namespace practicheskaya5
         {
             if (Int32.TryParse(incValue.Text, out int inc))
             {
-                triad.Sum(inc);
-                First1.Text = triad.Value1.ToString();
-                Second2.Text = triad.Value2.ToString();
-                Third3.Text = triad.Value3.ToString();
+                int firstNumber = Convert.ToInt32(First1.Text);
+                int secondNumber = Convert.ToInt32(Second2.Text);
+                int thirdNumber = Convert.ToInt32(Third3.Text);
+                int chislo = Convert.ToInt32(incValue.Text);
+                ClassLibrary1.Triad triadNumbers = new Triad(firstNumber, secondNumber, thirdNumber);
+                int sum = triadNumbers + chislo;
+                Resultat1.Text = sum.ToString();
             }
             else
             {
@@ -74,13 +87,28 @@ namespace practicheskaya5
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Создать класс Triad (тройка положительных чисел). " +
-                "Создать необходимые методы и свойства. Определить метод увеличения полей на заданное число. " +
-                "Создать перегруженный метод для удвоения всех полей.\nБароян Гиоргий\nИСП-31");
+                " Использовать класс Triad (тройка положительных чисел). " +
+                "Разработать операцию инкремента увеличения полей на заданное число." +
+                "Разработать операцию для умножения триады с числом. \nБароян Гиоргий\nИСП-31");
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        //вывести значения
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            First1.Text = triad.Value1.ToString();
+            Second2.Text = triad.Value2.ToString();
+            Third3.Text = triad.Value3.ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

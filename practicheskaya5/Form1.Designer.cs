@@ -41,6 +41,7 @@
             this.incValue = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.input = new System.Windows.Forms.Button();
             this.tretye = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,6 +58,10 @@
             this.сгенерироватьЗначеняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.увеличитьВсеЗнчениеНа1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.увеличитьВсеЗначенияНаВведенноеЗначениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Resultat1 = new System.Windows.Forms.TextBox();
+            this.Resultat2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -65,11 +70,11 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button6.Location = new System.Drawing.Point(262, 108);
+            this.button6.Location = new System.Drawing.Point(239, 151);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(204, 26);
             this.button6.TabIndex = 16;
-            this.button6.Text = "Умножить на 2";
+            this.button6.Text = "Умножить на значение";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -143,7 +148,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button5.Location = new System.Drawing.Point(262, 229);
+            this.button5.Location = new System.Drawing.Point(239, 234);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(204, 26);
             this.button5.TabIndex = 15;
@@ -154,7 +159,7 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button8.Location = new System.Drawing.Point(262, 287);
+            this.button8.Location = new System.Drawing.Point(246, 325);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(204, 57);
             this.button8.TabIndex = 17;
@@ -165,7 +170,7 @@
             // incValue
             // 
             this.incValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.incValue.Location = new System.Drawing.Point(295, 180);
+            this.incValue.Location = new System.Drawing.Point(272, 105);
             this.incValue.Name = "incValue";
             this.incValue.Size = new System.Drawing.Size(137, 26);
             this.incValue.TabIndex = 14;
@@ -174,7 +179,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label11.Location = new System.Drawing.Point(318, 157);
+            this.label11.Location = new System.Drawing.Point(299, 82);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(83, 20);
             this.label11.TabIndex = 13;
@@ -182,6 +187,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.input);
             this.groupBox1.Controls.Add(this.tretye);
             this.groupBox1.Controls.Add(this.label5);
@@ -196,6 +202,16 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Задать значения";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(30, 289);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 26);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Вывести";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // input
             // 
@@ -262,7 +278,7 @@
             this.действияToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(526, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(574, 24);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -328,11 +344,49 @@
             this.увеличитьВсеЗначенияНаВведенноеЗначениеToolStripMenuItem.Text = "Увеличить все значения на введенное число";
             this.увеличитьВсеЗначенияНаВведенноеЗначениеToolStripMenuItem.Click += new System.EventHandler(this.button5_Click);
             // 
+            // Resultat1
+            // 
+            this.Resultat1.Location = new System.Drawing.Point(292, 208);
+            this.Resultat1.Name = "Resultat1";
+            this.Resultat1.Size = new System.Drawing.Size(100, 20);
+            this.Resultat1.TabIndex = 20;
+            // 
+            // Resultat2
+            // 
+            this.Resultat2.Location = new System.Drawing.Point(292, 295);
+            this.Resultat2.Name = "Resultat2";
+            this.Resultat2.Size = new System.Drawing.Size(100, 20);
+            this.Resultat2.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(288, 273);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 20);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Результат";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label6.Location = new System.Drawing.Point(288, 186);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 20);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Результат";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 507);
+            this.ClientSize = new System.Drawing.Size(574, 507);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Resultat2);
+            this.Controls.Add(this.Resultat1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox4);
@@ -343,6 +397,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -385,6 +440,11 @@
         private System.Windows.Forms.ToolStripMenuItem сгенерироватьЗначеняToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem увеличитьВсеЗнчениеНа1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem увеличитьВсеЗначенияНаВведенноеЗначениеToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Resultat1;
+        private System.Windows.Forms.TextBox Resultat2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
     }
 }
 

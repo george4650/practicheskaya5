@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "practicheskaya5", "practicheskaya5\practicheskaya5.csproj", "{4C28E1E0-8E0A-43B7-9F14-F04E5775230C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Практическая6", "practicheskaya5\Практическая6.csproj", "{4C28E1E0-8E0A-43B7-9F14-F04E5775230C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{D3E39A29-D8F1-476F-AFB0-5C00E60EBB29}"
 EndProject
