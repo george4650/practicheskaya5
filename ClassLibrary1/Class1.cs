@@ -9,7 +9,7 @@ namespace ClassLibrary1
 {
     public class Triad
     {
-        int value1,
+       protected  int value1,
             value2,
             value3;
 
@@ -52,9 +52,9 @@ namespace ClassLibrary1
                 }
             }
         }
-    
+
         // Значение второй переменной
-      
+
         public int Value2
         {
             get
@@ -74,9 +74,9 @@ namespace ClassLibrary1
                 }
             }
         }
-      
+
         // Значение третьей переменной
-       
+
         public int Value3
         {
             get
@@ -97,34 +97,162 @@ namespace ClassLibrary1
             }
         }
 
-        /*Методы*/
-       
-        // Задает случайные значения в диапазоне от 0 до 50 
         
+
+    }
+    public class Time : Triad
+    {             
+        public Time(int initValue1, int initValue2, int initValue3) :
+           base(initValue1, initValue2, initValue3)
+        {
+            
+                value1 = initValue1;
+                value2 = initValue2;
+                value3 = initValue3;
+            
+            
+        }
+        public int Value1
+        {
+            get
+            {
+                return value1;
+            }
+            set
+            {
+                // проверяем, что число положительное
+                if (value > 0 && value < 24)
+                {
+                    value1 = value;
+                }
+                else
+                {
+                    MessageBox.Show("Неккоректный ввод");
+                }
+            }
+        }
+
+        // Значение второй переменной
+
+        public int Value2
+        {
+            get
+            {
+                return value2;
+            }
+            set
+            {
+                // проверяем, что число положительное
+                if (value > 0 && value < 60)
+                {
+                    value2 = value;
+                }
+                else
+                {
+                    MessageBox.Show("Неккоректный ввод");
+                }
+            }
+        }
+
+        // Значение третьей переменной
+
+        public int Value3
+        {
+            get
+            {
+                return value3;
+            }
+            set
+            {
+                // проверяем, что число положительное
+                if (value > 0 && value < 60)
+                {
+                    value3 = value;
+                }
+                else
+                {
+                    MessageBox.Show("Неккоректный ввод");
+                }
+            }
+        }
+
+        
+
+        // Задает случайные значения в диапазоне от 0 до 50 
+
         public void RandomFill()
         {
             Random random = new Random();
-            value1 = random.Next(0, 50);
-            value2 = random.Next(0, 50);
-            value3 = random.Next(0, 50);
+            value1 = random.Next(0, 23);
+            value2 = random.Next(0, 59);
+            value3 = random.Next(0, 59);
         }
 
-
-        // Перемножений всех значений
-
-        public static int operator *(Triad triad, int initValue)
+        public void SumSecond(int initValue)
         {
-            int result = triad.value1 * triad.value2 * triad.value3 * initValue;
-            return result;
+            value3 = value3 + initValue;
+            while (value3 > 59)
+            {
+                value2++;
+                value3 -= 60;
+                if (value2 > 59)
+                {
+                    value1++;
+                    value2 -= 60;
+                    if (value1 > 23)
+                    {
+                        value1 = 0;
+                    }
+                }
+            }
+        }
+        public void SumMinute(int initValue)
+        {                     
+            value2 = value2 + initValue;
+            while(value2>59)
+            {
+                value1++;
+                value2 -= 60;
+                if (value1 > 23)
+                {
+                    value1-= 24;
+                }
+            }
+        }
+        public void Increment1()
+        {
+            if (value1 < 23) 
+            {
+                value1++; 
+            }     
+            else value1 = 0;
+        }
+        public void Increment2()
+        {
+
+            if (value2 < 59)
+            {
+                value2++;
+            }
+            else 
+            { 
+                value2 = 0; 
+                value1++; 
+            }
+
+        }
+        public void Increment3()
+        {
+            if (value3 < 59)
+            {
+                value3++;
+            }
+            else
+            {
+                value3 = 0;
+               
+            }
         }
 
-        // Сложение всех значений
-        public static  int operator +(Triad triad, int initValue )
-        {
-            int result = triad.value1 + triad.value2 + triad.value3 + initValue;
-            return result;
-        }
-       
-       
     }
 }

@@ -13,31 +13,17 @@ namespace practicheskaya5
 {
     public partial class Form1 : Form
     {
-       
+
         public Form1()
         {
             InitializeComponent();
         }
-        ClassLibrary1.Triad triad = new Triad();
-        
-        //Умножить значения с числом
+        ClassLibrary1.Time time = new Time(5, 5, 5);
+
+
         private void button6_Click(object sender, EventArgs e)
         {
-            if (Int32.TryParse(incValue.Text, out int inc))
-            {
-                int firstNumber = Convert.ToInt32(First1.Text);
-                int secondNumber = Convert.ToInt32(Second2.Text);
-                int thirdNumber = Convert.ToInt32(Third3.Text);
-                int chislo = Convert.ToInt32(incValue.Text);
-                ClassLibrary1.Triad triadNumbers = new Triad(firstNumber, secondNumber, thirdNumber);
-                int Mult = triadNumbers * chislo;
-                Resultat2.Text = Mult.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Некорректный ввод");
-            }
-            
+
         }
 
         //Ввести значения
@@ -46,9 +32,9 @@ namespace practicheskaya5
             if (Int32.TryParse(pervoe.Text, out int first) && Int32.TryParse(vtoroe.Text, out int second) && Int32.TryParse(tretye.Text, out int third))
             {
 
-                triad.Value1 = first;
-                triad.Value2 = second;
-                triad.Value3 = third;
+                time.Value1 = first;
+                time.Value2 = second;
+                time.Value3 = third;
             }
             else
             {
@@ -59,24 +45,21 @@ namespace practicheskaya5
         //Сгенерировать значения
         private void button8_Click(object sender, EventArgs e)
         {
-            triad.RandomFill();
-            First1.Text = triad.Value1.ToString();
-            Second2.Text = triad.Value2.ToString();
-            Third3.Text = triad.Value3.ToString();
+            time.RandomFill();
+            First1.Text = time.Value1.ToString();
+            Second2.Text = time.Value2.ToString();
+            Third3.Text = time.Value3.ToString();
         }
 
         //Увеличить на значение
         private void button5_Click(object sender, EventArgs e)
         {
-            if (Int32.TryParse(incValue.Text, out int inc))
+            if (Int32.TryParse(incValue1.Text, out int inc))
             {
-                int firstNumber = Convert.ToInt32(First1.Text);
-                int secondNumber = Convert.ToInt32(Second2.Text);
-                int thirdNumber = Convert.ToInt32(Third3.Text);
-                int chislo = Convert.ToInt32(incValue.Text);
-                ClassLibrary1.Triad triadNumbers = new Triad(firstNumber, secondNumber, thirdNumber);
-                int sum = triadNumbers + chislo;
-                Resultat1.Text = sum.ToString();
+                time.SumSecond(inc);
+                Third3.Text = time.Value3.ToString();
+                Second2.Text = time.Value2.ToString();
+                First1.Text = time.Value1.ToString();
             }
             else
             {
@@ -86,10 +69,10 @@ namespace practicheskaya5
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Создать класс Triad (тройка положительных чисел). " +
-                " Использовать класс Triad (тройка положительных чисел). " +
-                "Разработать операцию инкремента увеличения полей на заданное число." +
-                "Разработать операцию для умножения триады с числом. \nБароян Гиоргий\nИСП-31");
+            MessageBox.Show(" Использовать класс Triad (тройка положительных чисел). " +
+                "Определить класс- наследник Time с полями: час, минута, секунда." +
+                " Переопределить методы увеличения полей на 1 и определить методы увеличения на n секунд m минут." +
+                "\nБароян Гиоргий\nИСП-31");
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -101,12 +84,64 @@ namespace practicheskaya5
         private void button1_Click_1(object sender, EventArgs e)
         {
 
-            First1.Text = triad.Value1.ToString();
-            Second2.Text = triad.Value2.ToString();
-            Third3.Text = triad.Value3.ToString();
+            First1.Text = time.Value1.ToString();
+            Second2.Text = time.Value2.ToString();
+            Third3.Text = time.Value3.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        //Увеличить часы на 1
+        private void button2_Click(object sender, EventArgs e)
+        {
+            time.Increment1();
+            Second2.Text = time.Value2.ToString();
+            First1.Text = time.Value1.ToString();
+            Third3.Text = time.Value3.ToString();
+
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (Int32.TryParse(incValue2.Text, out int inc))
+            {
+                time.SumMinute(inc);
+                Second2.Text = time.Value2.ToString();
+                First1.Text = time.Value1.ToString();
+                Third3.Text = time.Value3.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Некорректный ввод");
+            }
+        }
+
+        private void pervoe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        //Увеличить минуты на 1
+        private void button3_Click(object sender, EventArgs e)
+        {
+            time.Increment2();
+            Second2.Text = time.Value2.ToString();
+            First1.Text = time.Value1.ToString();
+            Third3.Text = time.Value3.ToString();
+
+        }
+        //Увеличить секунды на 1
+        private void button4_Click(object sender, EventArgs e)
+        {
+            time.Increment3();
+            Second2.Text = time.Value2.ToString();
+            First1.Text = time.Value1.ToString();
+            Third3.Text = time.Value3.ToString();
+        }
+
+        private void First1_TextChanged(object sender, EventArgs e)
         {
 
         }
